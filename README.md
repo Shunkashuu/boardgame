@@ -1,6 +1,5 @@
 # The Pokéboard game
 
-Projet 6 OpenClassrooms formation - Jeu de plateau en tour par tour js
 6th project OpenClassrooms training - turn-based board game
 
 ## Description
