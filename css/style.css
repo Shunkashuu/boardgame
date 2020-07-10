@@ -8,42 +8,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-header {
-    margin: 80px 800px;
-}
-
-header .logo{
-    width: 400px;
-    height: 150px;
-}
-
-header button {
-    display:inline-block;
-    padding:0.5em 3em;
-    border:0.16em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    box-sizing: border-box;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-family:'Poppins',sans-serif;
-    font-weight:400;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.15s;
-    background: transparent;
-    cursor: pointer;
-}
-
-header button:hover{
-    color:#f1f1f1;
-    border-color:#DDDDDD;
-}
-
-header button:active{
-    color:#BBBBBB;
-    border-color:#BBBBBB;
-}
-
 video#bgvid {
     position: fixed; right: 0; bottom: 0;
     min-width: 100%; min-height: 100%;
@@ -57,6 +21,58 @@ video#bgvid {
       opacity: .5;
 }
 
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: white;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+header {
+    max-width: 1080px;
+    margin: auto;
+    padding: 50px;
+}
+
+header .logo{
+    width: 400px;
+    height: 150px;
+    margin: 0 280px;
+}
+
+h1 {
+    margin: 0 390px;
+}
+
+#vidpause {
+    margin: 10px 420px;
+}
+
+header button {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #3166B0;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Poppins',sans-serif;
+    font-weight:400;
+    color:#2F68B2;
+    text-align:center;
+    transition: all 0.15s;
+    background: transparent;
+    cursor: pointer;
+}
+
+header button:hover{
+    color:#89b3db;
+    border-color:#89b3db;
+}
+
 .row {
     display: flex;
     align-items: center;
@@ -64,30 +80,26 @@ video#bgvid {
     justify-content: space-around;
 }
 
-.col-4 {
+.col {
+    text-align: center;
     flex-basis: 25%;
-    padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
     transition: transform 0.5s;
+    padding: 30px;
 }
 
-.col-4:hover {
-    transform: translateY(-5px);
+.col:hover {
+    transform: translateY(-8px);
     cursor: pointer;
 }
 
-.col-4 p {
+.col p {
     font-size: 14px;
 }
 
-.col-4 img {
-    width: 50%;
+.col img {
+    width: 70%;
 }
 
-.small-container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
+
