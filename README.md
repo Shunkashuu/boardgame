@@ -9,9 +9,14 @@ The Pokéboard game project is the 6th project in my training to become a fronte
 
 ## Badges
 
-https://img.shields.io/badge/<made with>-<javascript>-<green>
+https://forthebadge.com/images/badges/built-with-love.svg https://forthebadge.com/images/badges/made-with-javascript.svg https://forthebadge.com/images/badges/uses-html.svg https://forthebadge.com/images/badges/uses-css.svg
 
 
 ## License
 
 Don't use for commercial use, only for testing the game 
+
+
+## Status
+
+Work in progress
