@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu de plateau en tour par tour</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+   
+    <header>
+        <img src="img/logo.png" class="logo" alt="Pokémon logo">
+        <h1>Boardgame</h1>
+        <button id="vidpause">Pause</button>
+    </header>
+
+    <video autoplay loop id="bgvid">
+        <source src="img/pokemon-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                <img src="img/heros.png" alt="">
+                <h4>Héros</h4>
+            </div>
+            <div class="col-4">
+                <img src="img/heros2.png" alt="">
+                <h4>Victor</h4>
+            </div>
+            <div class="col-4">
+                <img src="img/heroine.png" alt="">
+                <h4>Héroïne</h4>
+            </div>
+            <div class="col-4">
+                <img src="img/heroine2.png" alt="">
+                <h4>Gloria</h4>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/app.js"></script>
 </body>
 </html>
