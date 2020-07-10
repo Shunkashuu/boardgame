@@ -21,7 +21,7 @@ video#bgvid {
       opacity: .5;
 }
 
-.small-container {
+.caracters {
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
@@ -29,6 +29,11 @@ video#bgvid {
     background: white;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s;
+}
+
+.caracters h2 {
+    text-align: center;
+    padding: 40px;
 }
 
 header {
@@ -49,6 +54,14 @@ h1 {
 
 #vidpause {
     margin: 10px 420px;
+}
+
+.audioplayer {
+    margin: 10px 330px;
+}
+
+.btn-more {
+    color: white;
 }
 
 header button {
