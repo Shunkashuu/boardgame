@@ -9,8 +9,7 @@ The Pokéboard game project is the 6th project in my training to become a fronte
 
 ## Badges
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)]
-https://forthebadge.com/images/badges/made-with-javascript.svg https://forthebadge.com/images/badges/uses-html.svg https://forthebadge.com/images/badges/uses-css.svg
+![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg) ![ForTheBadge built-with-javascript](https://forthebadge.com/images/badges/made-with-javascript.svg) ![ForTheBadge uses-html](https://forthebadge.com/images/badges/uses-html.svg) ![ForTheBadge uses-css](https://forthebadge.com/images/badges/uses-css.svg)
 
 
 ## License
