@@ -21,7 +21,7 @@ video#bgvid {
       opacity: .5;
 }
 
-.caracters {
+#caracters {
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
@@ -31,7 +31,7 @@ video#bgvid {
     transition: transform 0.5s;
 }
 
-.caracters h2 {
+#caracters h2 {
     text-align: center;
     padding: 40px;
 }
@@ -57,7 +57,7 @@ h1 {
 }
 
 .audioplayer {
-    margin: 10px 330px;
+    margin: 10px 340px;
 }
 
 .btn-more {
