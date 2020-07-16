@@ -21,21 +21,6 @@ video#bgvid {
       opacity: .5;
 }
 
-#caracters {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    background: white;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s;
-}
-
-#caracters h2 {
-    text-align: center;
-    padding: 40px;
-}
-
 header {
     max-width: 1080px;
     margin: auto;
@@ -106,6 +91,26 @@ header button:hover{
     cursor: pointer;
     -webkit-animation: action 1s infinite  alternate;
     animation: action 0.6s infinite  alternate;
+}
+
+#caracters {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: white;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+#caracters h2 {
+    text-align: center;
+    padding: 40px;
+}
+
+#salameche, #bulbizarre, #carapuce, #pikachu, #evoli  {
+    width: 40%;
+    height: 100%;
 }
 
 @-webkit-keyframes action {
