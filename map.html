@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jeu de plateau en tour par tour</title>
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="icon" href="assets/img/Gen II - 08. Sport Ball.ico" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+    <video paused loop id="bgvid">
+        <source src="video/pokemon-video.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <img src="assets/img/logo.png" class="logo" alt="Pokémon logo">
+        <div class="title">
+            <h1>Boardgame</h1>
+            <button id="vidpause">Stopper vidéo</button>
+        </div>
+        <audio controls preload="auto" class="audioplayer" loop>
+            <source src="audio/pokemon-theme.mp3" type="audio/mpeg">
+        </audio>
+    </header>
+
+    <section id="caracters">
+        <div id="trainer">
+            <div class="row">
+                <div class="col">
+                    <div id="lucas">
+                        <img src="assets/img/lucas.png" id="lucas" alt="Lucas">
+                        <h4>Lucas</h4>
+                        <h5></h5>
+                        <progress class="progressbar" max="100" value="100"></progress>
+                    </div>
+				</div>
+				<!-----10x10----->
+				<canvas id="canvas" width="620px" height="620px"></canvas>
+                <div class="col">
+                    <div id="victor">
+                        <img src="assets/img/victor.png" alt="Victor">
+                        <h4>Victor</h4>
+                        <progress class="progressbar" max="100" value="100"><div></div></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+
+	<footer>
+        <p>Made with ❤️ by <a href="https://mariongajic.fr/">Marion GAJIC</a></p>
+    </footer>
+	
+<script src="assets/js/map.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

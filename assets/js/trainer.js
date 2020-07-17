@@ -25,7 +25,6 @@ let Victor = document.getElementById("victor");
 let Aurore = document.getElementById("aurore");
 let Gloria = document.getElementById("gloria");
 
-
 //Déclare un dresseur pour la classe trainer
 let p1 = new Trainer("","");
 let p1test = p1;
@@ -56,13 +55,6 @@ Gloria.addEventListener('click',function(){
   hideAndRemove();
 })
 
-
-
-
-//don't show pokémon choice
-//when trainer is chosen, pokémon appears and trainers disapears
-//player 1 can select a pokémon
-//the game begin and the boardgame appears with the trainer and the pokémon chosen
 function hideAndRemove() {
   if(p1 !== p1test) {
     trainer.style.display='none';

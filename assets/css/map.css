@@ -71,10 +71,14 @@ header button:hover{
     border-color:#89b3db;
 }
 
+canvas {
+    border: 1px solid black;
+    margin: 100px;
+}
+
 .row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -83,47 +87,20 @@ header button:hover{
     flex-basis: 25%;
     min-width: 200px;
     margin-bottom: 50px;
-    transition: transform 0.5s;
     padding: 30px;
 }
 
-.col:hover {
-    cursor: pointer;
-    -webkit-animation: action 1s infinite  alternate;
-    animation: action 0.6s infinite  alternate;
-}
-
 #caracters {
-    max-width: 1080px;
+    max-width: 1500px;
     margin: auto;
     padding: 0 25px;
     background: white;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s;
 }
 
 #caracters h2 {
     text-align: center;
     padding: 40px;
-}
-
-#salameche, #bulbizarre, #carapuce, #pikachu, #evoli  {
-    width: 40%;
-    height: 100%;
-}
-
-#pokemon {
-    display: none;
-}
-
-@-webkit-keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-
-@keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
 }
 
 .col p {
@@ -150,3 +127,17 @@ a:hover {
     transition: 0.3s;
 }
 
+.progressbar {
+    background-color: black;
+    border-radius: 13px;
+    /* (height of inner div) / 2 + padding */
+    padding: 3px;
+}
+  
+.progressbar>div {
+    background-color: orange;
+    width: 40%;
+    /* Adjust with JavaScript */
+    height: 20px;
+    border-radius: 10px;
+}
