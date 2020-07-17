@@ -18,4 +18,4 @@ Don't use for commercial use, only for testing the game
 
 ## Status
 
-Work in progress
+Work in progress. The menu page is on, you can choose a trainer and a pokémon. I need to design the game page, maybe with canvas to have the board.
