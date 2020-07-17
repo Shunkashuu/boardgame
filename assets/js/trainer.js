@@ -37,27 +37,62 @@ const gloria = new Trainer("Gloria","f");
 Lucas.addEventListener('click',function(){
   console.log(lucas.decrire());
   p1=lucas;
-  hideAndRemove();
+  fadeout(trainer);
+  unfade(pokemon);
 })
 Victor.addEventListener('click',function(){
   console.log(victor.decrire());
   p1=victor;
-  hideAndRemove();
+  fadeout(trainer);
+  unfade(pokemon);
 })
 Aurore.addEventListener('click',function(){
   console.log(aurore.decrire());
   p1=aurore;
-  hideAndRemove();
+  fadeout(trainer);
+  unfade(pokemon);
 })
 Gloria.addEventListener('click',function(){
   console.log(gloria.decrire());
   p1=gloria;
-  hideAndRemove();
+  fadeout(trainer);
+  unfade(pokemon);
 })
 
-function hideAndRemove() {
-  if(p1 !== p1test) {
-    trainer.style.display='none';
-    pokemon.style.display='block';
-  }
+//Test pour la disparition - apparation on clic
+/*function hideAndRemove(){setTimeout( function() {
+    if(p1 !== p1test) {
+      trainer.style.display='none';
+      fadeTarget.style.display='block';
+    }
+  },500)
+}*/
+
+//Fade out trainer to fade in pokémon
+function fadeout(element) {
+  var op = 1;  // initial opacity
+  var timer = setInterval(function () {
+      if (op <= 0.1){
+          clearInterval(timer);
+          element.style.display = 'none';
+      }
+      element.style.opacity = op;
+      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op -= op * 0.1;
+  }, 50);
 }
+
+function unfade(element) {setTimeout(function(){
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 50);
+  },1150);
+}
+
