@@ -4,7 +4,7 @@ class Trainer {
       this.nom = nom;
       this.genre = genre;
     }
-    // Renvoie la description du trainer
+    // Renvoie le nom et le genre du trainer
     decrire() {
       switch(this.genre){
         case this.genre="h":
@@ -17,6 +17,32 @@ class Trainer {
     }
   }
 
+//Création de l'objet Pokémon
+class Pokémon {
+    constructor(nom, sante) {
+      this.nom = nom;
+      this.sante = sante;
+  }
+  // Renvoie le nom du pokémon
+  decrire() {
+    return `${this.nom} a été choisi`;
+    }
+  }
+
+//Récupère l'élément html img
+let Salameche = document.getElementById("salameche");
+let Bulbizarre = document.getElementById("bulbizarre");
+let Carapuce = document.getElementById("carapuce");
+let Pikachu = document.getElementById("pikachu");
+let Evoli = document.getElementById("evoli");
+
+//Déclare un objet pour la classe pokémon
+const salameche = new Pokémon("Salameche", 100);
+const bulbizarre = new Pokémon("Bulbizarre", 100);
+const carapuce = new Pokémon("Carapuce", 100);
+const pikachu = new Pokémon("Pikachu", 100);
+const evoli = new Pokémon("Evoli", 100);
+
 //Récupère l'élément html img
 let trainer = document.getElementById("trainer");
 let pokemon = document.getElementById("pokemon");
@@ -26,8 +52,8 @@ let Aurore = document.getElementById("aurore");
 let Gloria = document.getElementById("gloria");
 
 //Déclare un dresseur pour la classe trainer
-let p1 = new Trainer("","");
-let p1test = p1;
+//let p1 = new Trainer("","");
+//let p1test = p1;
 const lucas = new Trainer("Lucas","h");
 const victor = new Trainer("Victor","h");
 const aurore = new Trainer("Aurore","f");
@@ -57,6 +83,23 @@ Gloria.addEventListener('click',function(){
   p1=gloria;
   fadeout(trainer);
   unfade(pokemon);
+})
+
+//Ajoute un évènement de séléction, et l'affiche dans la console (vérification séléction)
+Salameche.addEventListener('click',function(){
+  console.log(salameche.decrire())
+})
+Bulbizarre.addEventListener('click',function(){
+  console.log(bulbizarre.decrire())
+})
+Carapuce.addEventListener('click',function(){
+  console.log(carapuce.decrire())
+})
+Pikachu.addEventListener('click',function(){
+  console.log(pikachu.decrire())
+})
+Evoli.addEventListener('click',function(){
+  console.log(evoli.decrire())
 })
 
 //Test pour la disparition - apparation on clic
