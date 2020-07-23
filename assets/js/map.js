@@ -74,33 +74,36 @@ var ct_normal = new Image();
     context.drawImage(ct_normal,ct_h, ct_v, 60, 60);
 })
 
-class Map {
-    constructor() {
-        this.cells = [];
-        this.unavailableCells = [];
-        this.players = [new Player("lucas", new Weapon("ct-charge", 10, "assets/img/ct_normal.png")),
-                        new Player("gloria", new Weapon("ct-charge", 10, "assets/img/ct_normal.png"))];
-        this.weapons =
-            [new Weapon('ct-coup-dboule', 12, "assets/img/ct_normal.png"),
-            new Weapon('ct-belier', 15, "assets/img/ct_normal.png"),
-            new Weapon('ct-damocles', 20, "assets/img/ct_normal.png"),
-            new Weapon('ct-destruction', 20, "assets/img/ct_normal.png")];
-        this.pokemon =
-            [new Pokemon('salameche', 60, "assets/img/salameche.png"),
-            new Pokemon('bulbizarre', 60, "assets/img/bulbi.png"),
-            new Pokemon('carapuce', 60, "assets/img/carapuce.png"),
-            new Pokemon('pikachu', 60, "assets/img/pikachu.png"),
-            new Pokemon('evoli', 60, "assets/img/evoli.png")];
-        this.obstacles =
-            [new Obstacle('roche', 60, "assets/img/roche.png"),
-            new Obstacle('roche2', 60, "assets/img/roche.png"),
-            new Obstacle('roche3', 60, "assets/img/roche.png"),
-            new Obstacle('roche4', 60, "assets/img/roche.png"),
-            new Obstacle('roche5', 60, "assets/img/roche.png")]
-
-    }
-}
-
+//Creation des positions dans les cellules
+class cases {
+    constructor(posa, posb) {
+      this.posa = posa;
+      this.posb = posb;
+    } 
+    position(){
+            var pos=new Array();
+          pos[0]=this.posa;
+          pos[1]=this.posb;
+          return pos;
+      }
+  }
+  
+  let y=0;
+  var cell = new Array(99);
+  
+  for(i=0; i < 10 ; i++){
+      for(j=0; j < 10; j++){
+          cell[y]=new cases(60*i,60*j);
+          y++;
+      }    
+  }
+      for(x=0;x<100;x++){
+          console.log(cell[x]);
+      }
+  
+  //Choix de cellule + valeur position
+      console.log(cell[35]);
+      console.log(cell[35].position());
 
 
 
