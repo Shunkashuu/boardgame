@@ -30,11 +30,11 @@ class Pokémon {
   }
 
 //Récupère l'élément html img
-let Salameche = document.getElementById("salameche");
-let Bulbizarre = document.getElementById("bulbizarre");
-let Carapuce = document.getElementById("carapuce");
-let Pikachu = document.getElementById("pikachu");
-let Evoli = document.getElementById("evoli");
+var Salameche = document.getElementById("salameche");
+var Bulbizarre = document.getElementById("bulbizarre");
+var Carapuce = document.getElementById("carapuce");
+var Pikachu = document.getElementById("pikachu");
+var Evoli = document.getElementById("evoli");
 
 //Déclare un objet pour la classe pokémon
 const salameche = new Pokémon("Salameche", 100);
@@ -44,12 +44,12 @@ const pikachu = new Pokémon("Pikachu", 100);
 const evoli = new Pokémon("Evoli", 100);
 
 //Récupère l'élément html img
-let trainer = document.getElementById("trainer");
-let pokemon = document.getElementById("pokemon");
-let Lucas = document.getElementById("lucas");
-let Victor = document.getElementById("victor");
-let Aurore = document.getElementById("aurore");
-let Gloria = document.getElementById("gloria");
+var trainer = document.getElementById("trainer");
+var pokemon = document.getElementById("pokemon");
+var Lucas = document.getElementById("lucas");
+var Victor = document.getElementById("victor");
+var Aurore = document.getElementById("aurore");
+var Gloria = document.getElementById("gloria");
 
 //Déclare un dresseur pour la classe trainer
 //let p1 = new Trainer("","");

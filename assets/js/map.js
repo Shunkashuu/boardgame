@@ -26,30 +26,56 @@ function drawBoard(){
 
 drawBoard();
 
+//Creation des positions dans les cellules
+class Cases {
+    constructor(posa, posb) {
+      this.posa = posa;
+      this.posb = posb;
+    } 
+    position(){
+        var pos = [];
+          pos[0] = this.posa;
+          pos[1] = this.posb;
+          return pos;
+      }
+  }
+  
 //fonction pour la position aléatoire des objets
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+function getRandomInt() {
+    return Math.floor(Math.random() * Math.floor(100));
 }
 
-//appel de la fonction pour le placement aléatoire en tenant compte du nombre de cases + bordure
-pikachu_h = getRandomInt(10)*60+p;
-pikachu_v = getRandomInt(10)*60+p;
-//appel des pokémon, des ct et des obstacles
-var pikachu = new Image();
-    pikachu.src = 'assets/img/pikachu.png';
-    pikachu.addEventListener('load', function() {
-        context.drawImage(pikachu,pikachu_h, pikachu_v, 60, 60);
-})
+let y = 0;
+var cell = [99];
+  
+for(i = 0; i < 10 ; i++){
+    for(j = 0; j < 10; j++){
+        cell[y] = new Cases(60*i+p, 60*j+p);
+        y++;
+    }    
+}
 
-evoli_h = getRandomInt(10)*60+p;
-evoli_v = getRandomInt(10)*60+p;
+var pikachu_pos= [];
+    pikachu_pos= cell[getRandomInt()].position(); 
+var pikachu_v = pikachu_pos[0];
+var pikachu_h = pikachu_pos[1];
 
-var evoli = new Image();
-    evoli.src = 'assets/img/evoli.png';
-    evoli.addEventListener('load', function() {
-        context.drawImage(evoli, evoli_h, evoli_v, 60, 60);
-})
+var evoli_pos= [];
+    evoli_pos= cell[getRandomInt()].position(); 
+var evoli_v = evoli_pos[0];
+var evoli_h = evoli_pos[1];
 
+    //verification console de toute les cases
+      /*for(x = 0; x < 100 ; x++){
+          console.log(cell[x]);
+      }*/
+  
+  //Choix de cellule + valeur position
+      //console.log(cell[getRandomInt()]);
+      //console.log(cell[35].position());
+
+//A faire :
+//Boucle pour générer la roche entre 2 et 5 par exemple
 roche_h = getRandomInt(10)*60+p;
 roche_v = getRandomInt(10)*60+p;
 
@@ -59,12 +85,7 @@ var roche = new Image();
         context.drawImage(roche, roche_h, roche_v, 60, 60);
 })
 
-var roche2 = new Image();
-    roche2.src = 'assets/img/roche.png';
-    roche2.addEventListener('load', function() {
-        context.drawImage(roche2, roche_v, roche_h, 60, 60);
-})
-
+//boucle pour générer la ct fois 4
 ct_h = getRandomInt(10)*60+p;
 ct_v = getRandomInt(10)*60+p;
 
@@ -73,44 +94,5 @@ var ct_normal = new Image();
     ct_normal.addEventListener('load', function() {
     context.drawImage(ct_normal,ct_h, ct_v, 60, 60);
 })
-
-//Creation des positions dans les cellules
-class cases {
-    constructor(posa, posb) {
-      this.posa = posa;
-      this.posb = posb;
-    } 
-    position(){
-            var pos=new Array();
-          pos[0]=this.posa;
-          pos[1]=this.posb;
-          return pos;
-      }
-  }
-  
-  let y=0;
-  var cell = new Array(99);
-  
-  for(i=0; i < 10 ; i++){
-      for(j=0; j < 10; j++){
-          cell[y]=new cases(60*i,60*j);
-          y++;
-      }    
-  }
-      for(x=0;x<100;x++){
-          console.log(cell[x]);
-      }
-  
-  //Choix de cellule + valeur position
-      console.log(cell[35]);
-      console.log(cell[35].position());
-
-
-
-
-
-
-
-          
-
-
+//les objets hériteront de la class cells pour récupérer la position, la class cells doit être avec pokemon
+//evoli.posa et evoli.posb different de pikachu.posa et pikachu.posb sinon relancer la fonction qui s'occupe des positions
