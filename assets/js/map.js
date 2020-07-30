@@ -39,11 +39,6 @@ class Cases {
           return pos;
       }
   }
-  
-//fonction pour la position aléatoire des objets
-function getRandomInt() {
-    return Math.floor(Math.random() * Math.floor(100));
-}
 
 let y = 0;
 var cell = [99];
@@ -52,7 +47,21 @@ for(i = 0; i < 10 ; i++){
     for(j = 0; j < 10; j++){
         cell[y] = new Cases(60*i+p, 60*j+p);
         y++;
-    }    
+    }
+}
+
+    //verification console de toute les cases
+      /*for(x = 0; x < 100 ; x++){
+          console.log(cell[x]);
+      }*/
+  
+  //Choix de cellule + valeur position
+      //console.log(cell[getRandomInt()]);
+      //console.log(cell[35].position());
+
+//fonction pour la position aléatoire des objets
+function getRandomInt() {
+    return Math.floor(Math.random() * Math.floor(100));
 }
 
 var pikachu_pos= [];
@@ -65,34 +74,12 @@ var evoli_pos= [];
 var evoli_v = evoli_pos[0];
 var evoli_h = evoli_pos[1];
 
-    //verification console de toute les cases
-      /*for(x = 0; x < 100 ; x++){
-          console.log(cell[x]);
-      }*/
-  
-  //Choix de cellule + valeur position
-      //console.log(cell[getRandomInt()]);
-      //console.log(cell[35].position());
+var roche_pos= [];
+    roche_pos= cell[getRandomInt()].position(); 
+var roche_v = roche_pos[0];
+var roche_h = roche_pos[1];
 
-//A faire :
-//Boucle pour générer la roche entre 2 et 5 par exemple
-roche_h = getRandomInt(10)*60+p;
-roche_v = getRandomInt(10)*60+p;
-
-var roche = new Image();
-    roche.src = 'assets/img/roche.png';
-    roche.addEventListener('load', function() {
-        context.drawImage(roche, roche_h, roche_v, 60, 60);
-})
-
-//boucle pour générer la ct fois 4
-ct_h = getRandomInt(10)*60+p;
-ct_v = getRandomInt(10)*60+p;
-
-var ct_normal = new Image();
-    ct_normal.src = 'assets/img/ct_normal.png';
-    ct_normal.addEventListener('load', function() {
-    context.drawImage(ct_normal,ct_h, ct_v, 60, 60);
-})
-//les objets hériteront de la class cells pour récupérer la position, la class cells doit être avec pokemon
-//evoli.posa et evoli.posb different de pikachu.posa et pikachu.posb sinon relancer la fonction qui s'occupe des positions
+var ct_pos= [];
+    ct_pos= cell[getRandomInt()].position(); 
+var ct_v = ct_pos[0];
+var ct_h = ct_pos[1];
