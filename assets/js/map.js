@@ -32,29 +32,24 @@ class Cases {
       this.posa = posa;
       this.posb = posb;
     } 
-    position(){
+    position() {
         var pos = [];
-          pos[0] = this.posa;
-          pos[1] = this.posb;
-          return pos;
+            pos[0] = this.posa;
+            pos[1] = this.posb;
+        return pos;
       }
   }
 
+// y = pour avancer dans le tableau
 let y = 0;
 var cell = [99];
   
-for(i = 0; i < 10 ; i++){
-    for(j = 0; j < 10; j++){
+for(i = 0; i < 10 ; i++) {
+    for(j = 0; j < 10; j++) {
         cell[y] = new Cases(60*i+p, 60*j+p);
         y++;
     }
-}
-
-    //verification console de toute les cases
-      /*for(x = 0; x < 100 ; x++){
-          console.log(cell[x]);
-      }*/
-  
+}  
   //Choix de cellule + valeur position
       //console.log(cell[getRandomInt()]);
       //console.log(cell[35].position());
