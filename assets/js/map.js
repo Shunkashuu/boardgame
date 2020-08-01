@@ -8,7 +8,7 @@ var vline = height + (p*2) + 1;
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
-// Canvas
+// canvas
 function drawBoard(){
         for (var x = 0; x <= width; x += 60) {
             context.moveTo(0.5 + x + p, p);
@@ -26,7 +26,7 @@ function drawBoard(){
 
 drawBoard();
 
-//Creation des positions dans les cellules
+//creation des positions dans les cellules
 class Cases {
     constructor(posa, posb) {
       this.posa = posa;
@@ -43,18 +43,16 @@ class Cases {
 // y = pour avancer dans le tableau
 let y = 0;
 var cell = [99];
-  
+
+// i et j positions verticals et horizontales
 for(i = 0; i < 10 ; i++) {
     for(j = 0; j < 10; j++) {
         cell[y] = new Cases(60*i+p, 60*j+p);
         y++;
     }
-}  
-  //Choix de cellule + valeur position
-      //console.log(cell[getRandomInt()]);
-      //console.log(cell[35].position());
+}
 
-//fonction pour la position aléatoire des objets
+//fonction pour la position aleatoire des objets
 function getRandomInt() {
     return Math.floor(Math.random() * Math.floor(100));
 }
@@ -68,13 +66,3 @@ var evoli_pos= [];
     evoli_pos= cell[getRandomInt()].position(); 
 var evoli_v = evoli_pos[0];
 var evoli_h = evoli_pos[1];
-
-var roche_pos= [];
-    roche_pos= cell[getRandomInt()].position(); 
-var roche_v = roche_pos[0];
-var roche_h = roche_pos[1];
-
-var ct_pos= [];
-    ct_pos= cell[getRandomInt()].position(); 
-var ct_v = ct_pos[0];
-var ct_h = ct_pos[1];

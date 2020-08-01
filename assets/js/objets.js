@@ -23,16 +23,16 @@ var evoli = new Pokemon('Evoli', 100, 10, evolimg);
 
 class Obstacle {
     constructor(posa, posb) {
-        this.posa=posa;
-        this.posb=posb;
+        this.posa = posa;
+        this.posb = posb;
     }
 }
 
 var clonedRoche = [9];
 /*var nomroche= ['roche0','roche1','roche2','roche3','roche4',
                 'roche5','roche6','roche7','roche8','roche9',];*/
-var rocheimg= new Image();
-    rocheimg.src='assets/img/roche.png';
+var rocheimg = new Image();
+    rocheimg.src ='assets/img/roche.png';
 
 //j = position tableau
 for(let j = 0; j < 10; j++) {
@@ -46,8 +46,8 @@ for(let j = 0; j < 10; j++) {
 
 class Arme {
     constructor(posa, posb) {
-        this.posa=posa;
-        this.posb=posb;
+        this.posa = posa;
+        this.posb = posb;
     }
 }
 
@@ -57,22 +57,39 @@ var clonedCt = [3];
 var ctimg= new Image();
     ctimg.src='assets/img/ct.png';
 
+
 //j = position tableau
-for(let j = 0; j < 4; j++) {
-    var ct_pos = [];
+for(let j=0 ; j < 4; j++) {
+    placement_ct(j);
+} 
+
+function placement_ct(parametre){
+        var ct_pos = [];
         ct_pos = cell[getRandomInt()].position(); 
-        clonedCt[j] = new Arme(ct_pos[0],ct_pos[1]);
+        clonedCt[parametre] = new Arme(ct_pos[0],ct_pos[1]);
         ctimg.addEventListener('load', function() {
-            context.drawImage(ctimg, clonedCt[j].posa, clonedCt[j].posb, 60, 60);
-    });
-}
+        context.drawImage(ctimg, clonedCt[parametre].posa, clonedCt[parametre].posb, 60, 60);
+        });
+        compare(parametre);
+    }
 
-//verification console pour les roches
-for(x = 0; x < 10 ; x++){
-    console.log(clonedRoche[x]);
-}
-
-//verification console pour les ct
-for(x = 0; x < 10 ; x++){
-    console.log(clonedCt[x]);
-}
+// fonction pour comparer les ct aux roches afin qu'elles ne se placent pas au même endroit
+function compare(valeur) {
+        for (test = 0; test < clonedRoche.length; test++){
+            if(clonedCt[valeur].posa == clonedRoche[test].posa && 
+                clonedCt[valeur].posb == clonedRoche[test].posb) {
+                return placement_ct(valeur)
+            } else {
+            }
+        }    
+        for(test = 0; test < clonedCt.length; test++){    
+            if (test != valeur){
+                if(clonedCt[valeur].posa == clonedCt[test].posa && 
+                    clonedCt[valeur].posb == clonedCt[test].posb){
+                    return placement_ct(valeur)    
+                } else{
+                }
+            }else{
+            }    
+        }
+    }
