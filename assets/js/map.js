@@ -57,7 +57,7 @@ function getRandomInt() {
     return Math.floor(Math.random() * Math.floor(100));
 }
 
-var pikachu_pos= [];
+/*var pikachu_pos= [];
     pikachu_pos= cell[getRandomInt()].position(); 
 var pikachu_v = pikachu_pos[0];
 var pikachu_h = pikachu_pos[1];
@@ -65,4 +65,4 @@ var pikachu_h = pikachu_pos[1];
 var evoli_pos= [];
     evoli_pos= cell[getRandomInt()].position(); 
 var evoli_v = evoli_pos[0];
-var evoli_h = evoli_pos[1];
+var evoli_h = evoli_pos[1];*/
