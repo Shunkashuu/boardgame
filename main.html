@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeboardgame</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="master/assets/img/Gen II - 08. Sport Ball.ico" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+</head>
+<body>
+    
+    <video paused loop id="bgvid">
+        <source src="video/pokemon-video.mp4" type="video/mp4">
+    </video>
+
+    <header class="container">
+        <img src="master/assets/img/logo.png" class="logo" alt="Pokémon logo">
+        <h1>Boardgame</h1>
+        <button id="vidpause">Stopper vidéo</button>
+        <audio controls preload="auto" class="audioplayer" loop>
+            <source src="audio/pokemon-theme.mp3" type="audio/mpeg">
+        </audio>
+    </header>
+
+    <section id="caracters" class="container">
+        <div id="trainer">
+            <div class="row">
+                <div class="col">
+                    <div id="lucas">
+                        <img src="master/assets/img/lucas.png" alt="Lucas">
+                        <h4>Lucas</h4>
+                        <progress class="progressbar" max="100" value="100"></progress>
+                    </div>
+				</div>
+                <canvas	id="plateau" width="600" height="600"></canvas>
+                <div class="col">
+                    <div id="gloria">
+                        <img src="master/assets/img/gloria.png" alt="Gloria">
+                        <h4>Gloria</h4>
+                        <progress class="progressbar" max="100" value="100"><div></div></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+
+	<footer class="container">
+        <p>Made with ❤️ by <a href="https://mariongajic.fr/">Marion GAJIC</a></p>
+    </footer>
+
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
