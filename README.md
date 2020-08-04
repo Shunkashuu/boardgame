@@ -18,4 +18,4 @@ Don't use for commercial use, only for testing the game
 
 ## Status
 
-Work in progress. The menu page is on, you can choose a trainer and a pokémon but you can't access the game page yet.
+Work in progress. The objects are on the board and they never appear on the same case.
