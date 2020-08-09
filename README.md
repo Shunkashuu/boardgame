@@ -18,4 +18,4 @@ Don't use for commercial use, only for testing the game
 
 ## Status
 
-Work in progress. The objects are on the board and they never appear on the same case.
+Work in progress. The objects are on the board and they never appear on the same case. This version works with canvas. I added a new repository with the version based on a table and div system.
